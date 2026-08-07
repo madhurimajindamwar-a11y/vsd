@@ -209,22 +209,24 @@ The MUX design introduces some basic Verilog concepts:
 It converts Verilog RTL into a hardware-level representation.
 
 ### Synthesis Flow
-┌──────────────┐
-│ Verilog RTL  │
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│    Yosys     │
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│   Synthesis  │
-└──────┬───────┘
-       ▼
-┌──────────────┐
-│ Logic Gates  │
-└──────────────┘
-
+┌──────────────────┐
+│   Verilog RTL    │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│      Yosys       │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│    Synthesis     │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│    Logic Gates   │
+└──────────────────┘
 Basic command:
 bash
 yosys
