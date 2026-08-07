@@ -7,25 +7,34 @@ In this lab, a **2-to-1 Multiplexer** is designed using Verilog, verified using 
 
 ### 🔄 Design Flow
 
-      Verilog RTL
+┌─────────────────────┐
+│    Verilog RTL      │
+│      mux.v          │
+└──────────┬──────────┘
            │
            ▼
-      Testbench
+┌─────────────────────┐
+│     Testbench       │
+│      mux_tb.v       │
+└──────────┬──────────┘
            │
            ▼
-   Icarus Verilog
+┌─────────────────────┐
+│   Icarus Verilog    │
+│      Simulator      │
+└──────────┬──────────┘
            │
            ▼
-      Simulation
+┌─────────────────────┐
+│     Simulation      │
+│       Output        │
+└──────────┬──────────┘
            │
            ▼
-   Waveform Analysis
-           │
-           ▼
-         Yosys
-           │
-           ▼
-       Synthesis
+┌─────────────────────┐
+│      GTKWave        │
+│  Waveform Analysis  │
+└─────────────────────┘
 
 ## 📑 Table of Contents
 
@@ -122,13 +131,16 @@ bash
 gtkwave dump.vcd
 
 ### 📁 Project Structure
-Day-1/
-│
-├── mux.v
-├── mux_tb.v
-├── dump.vcd
-└── README.md
-
+┌──────────────────────────┐
+│         Day-1/           │
+└────────────┬─────────────┘
+             │
+     ┌───────┼────────┬──────────┐
+     ▼       ▼        ▼          ▼
+ ┌───────┐ ┌───────┐ ┌────────┐ ┌──────────┐
+ │mux.v  │ │mux_tb │ │dump.vcd│ │README.md │
+ │  RTL  │ │  Test │ │Waveform│ │   Docs   │
+ └───────┘ └───────┘ └────────┘ └──────────┘
 ## 4. Lab: 2-to-1 Multiplexer
 
 ### 🎯 Objective
@@ -164,21 +176,33 @@ The MUX design introduces some basic Verilog concepts:
 | `$dumpvars` | Records signals for waveform viewing |
 
 ### RTL Verification
-     Inputs
-       │
-       ▼
-┌─────────────┐
-│  2:1 MUX    │
-└──────┬──────┘
-       │
-       ▼
-     Output
-       │
-       ▼
-   Testbench
-       │
-       ▼
-    Verify
+┌──────────────────┐
+│   Input Signals  │
+│   I0, I1, S      │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│    2:1 MUX       │
+│   RTL Design     │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│   Output: Y      │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│    Testbench     │
+│   Verification   │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│  Pass / Fail     │
+│     Result       │
+└──────────────────┘
 
 ## 6. Introduction to Yosys
 **Yosys** is an open-source tool used for **RTL synthesis**.
