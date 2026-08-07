@@ -11,36 +11,12 @@ Day 1 covers the basic workflow of **Verilog RTL Design and Simulation**.
 A **2-to-1 Multiplexer** is designed, tested, simulated using **Icarus Verilog**, and introduced to **Yosys** for RTL synthesis.
 
 ### Design Flow
-
-```text
-┌──────────────┐
-│ Verilog RTL  │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│  Testbench   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│ Icarus       │
-│   Verilog    │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│ Simulation   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│   GTKWave    │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│    Yosys     │
-│  Synthesis   │
-└──────────────┘
-```
-
----
+Write the Verilog RTL code.
+Create the testbench.
+Compile the design using Icarus Verilog.
+Run the simulation.
+Verify the output using waveforms.
+Synthesize the RTL using Yosys.
 
 ## 📑 Table of Contents
 
@@ -51,8 +27,6 @@ A **2-to-1 Multiplexer** is designed, tested, simulated using **Icarus Verilog**
 5. [Verilog Code Analysis](#5-verilog-code-analysis)
 6. [Introduction to Yosys](#6-introduction-to-yosys)
 7. [Summary](#7-summary)
-
----
 
 ## 1. Simulator
 
@@ -74,30 +48,22 @@ A **2-to-1 Multiplexer** is designed, tested, simulated using **Icarus Verilog**
 ## 2. Design and Testbench
 
 ### 2-to-1 Multiplexer
+A 2-to-1 Multiplexer selects one of two inputs based on the select signal.
 
-```text
-       I0 ───────┐
-                 │
-                 ▼
-              ┌───────┐
-       I1 ───►│  2:1  │────► Y
-              │  MUX  │
-       S ────►│       │
-              └───────┘
-```
+I0 → Input 0
+I1 → Input 1
+S → Select signal
+Y → Output
 
-**Logic:**
-
-```text
-S = 0  →  Y = I0
-S = 1  →  Y = I1
-```
+Operation:
+When S = 0, Y = I0
+When S = 1, Y = I1
 
 ### Testbench
 
 The testbench applies different input combinations and verifies the MUX output.
 
-```text
+
 ┌────────────┐
 │ RTL Design │
 └─────┬──────┘
@@ -109,9 +75,6 @@ The testbench applies different input combinations and verifies the MUX output.
 ┌────────────┐
 │ Simulation │
 └────────────┘
-```
-
----
 
 ## 3. Getting Started with Icarus Verilog
 
@@ -125,10 +88,9 @@ iverilog -V
 
 ```bash
 iverilog -o mux_sim mux.v mux_tb.v
-```
+
 
 ### Run
-
 ```bash
 vvp mux_sim
 ```
@@ -141,11 +103,7 @@ gtkwave dump.vcd
 
 ### Simulation Flow
 
-```text
 RTL → Testbench → Compile → Simulate → Waveform
-```
-
----
 
 ## 4. Lab: Simulating a 2-to-1 Multiplexer
 
@@ -164,7 +122,6 @@ To design and simulate a **2-to-1 Multiplexer using Verilog HDL**.
 
 The output follows the selected input correctly for all test cases.
 
----
 
 ## 5. Verilog Code Analysis
 
@@ -178,53 +135,29 @@ The experiment introduces the following Verilog concepts:
 * `$dumpvars` – Records signals
 
 ### Verification Flow
-
-```text
-Input
-  ↓
-RTL Design
-  ↓
-Output
-  ↓
-Testbench
-  ↓
-Verify
-```
-
----
+Apply different input combinations.
+Change the select signal.
+Observe the output.
+Compare the actual output with the expected output.
+Confirm the correct operation of the MUX.
 
 ## 6. Introduction to Yosys
 
 **Yosys** is an open-source tool used for **RTL synthesis**.
 
 ### Synthesis Flow
-
-```text
-┌──────────────┐
-│ Verilog RTL  │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│    Yosys     │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│  Synthesis   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│  Logic Gates │
-└──────────────┘
-```
-
+Basic Steps
+Provide the Verilog RTL file.
+Read the design in Yosys.
+Process and optimize the RTL.
+Perform synthesis.
+Generate the synthesized hardware representation.
 Yosys converts the RTL description into a synthesized hardware representation.
 
 ## 7. Summary
-
 Day 1 introduced the basic **Verilog RTL design and simulation flow**.
 
 ### Key Takeaways
-
 * Designed a 2-to-1 Multiplexer
 * Created a Verilog testbench
 * Simulated the design using Icarus Verilog
@@ -237,7 +170,6 @@ Day 1 introduced the basic **Verilog RTL design and simulation flow**.
 Design → Testbench → Simulation → Verification → Synthesis
 ```
 
----
 
 ### 🛠️ Tools
 
