@@ -63,7 +63,7 @@ When S = 1, Y = I1
 
 The testbench applies different input combinations and verifies the MUX output.
 
-
+```
 ┌────────────┐
 │ RTL Design │
 └─────┬──────┘
@@ -75,6 +75,7 @@ The testbench applies different input combinations and verifies the MUX output.
 ┌────────────┐
 │ Simulation │
 └────────────┘
+```
 
 ## 3. Getting Started with Icarus Verilog
 
