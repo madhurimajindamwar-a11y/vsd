@@ -1,0 +1,28 @@
+# Verilog If & Case Constructs
+
+## Overview
+A compact Verilog RTL project demonstrating conditional
+logic using if-else and case constructs.
+
+## Topics
+- if / else
+- case
+- default case
+- Conditional RTL coding
+
+## Project Structure
+rtl/ → Verilog designs
+tb/  → Testbench
+
+## Key Learning
+- Use if-else for priority-based conditions.
+- Use case for multiple mutually exclusive choices.
+- Always consider a default condition in combinational logic.
+
+## Tools
+- Verilog
+- Icarus Verilog
+- GTKWave
+
+## Result
+Successfully verified if and case behavior through simulation.
