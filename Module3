@@ -1,1 +1,6 @@
-combinational and sequential opt_check
+# combinational and sequential opt_check #
+Has opt_check.v, opt_check2.v, etc.
+Covers combinational optimization
+Covers sequential optimization
+Uses Verilog + Yosys
+Includes opt_clean -purge and synthesis examples
