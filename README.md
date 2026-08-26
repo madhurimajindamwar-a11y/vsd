@@ -176,4 +176,8 @@ Design → Testbench → Simulation → Verification → Synthesis
 
 **Verilog HDL • Icarus Verilog • GTKWave • Yosys**
 
-> **Day 1 completed — Building the foundation of RTL design.**
+---
+## **Author**
+**Name:** J.Madhurima
+**College:** Anurag University
+**Branch:** Electronics and Communication Engineering (ECE)
