@@ -84,7 +84,7 @@ tt_025C_1v80
 
 represents a Typical-Typical process corner at 25°C and 1.80 V.
 
-## 1.2 Exploring the .lib File
+** 1.2 Exploring the .lib File**
 
 A Liberty (.lib) file contains information about standard cells.
 
@@ -105,7 +105,7 @@ grep -n "timing" sky130_fd_sc_hd__tt_025C_1v80.lib
 
 The .lib file helps synthesis tools understand the functionality, timing, area, and power characteristics of standard cells.
 
-# 2. Synthesis Approaches
+**2. Synthesis Approaches**
 
 Synthesis converts a Verilog RTL design into a gate-level representation.
 
@@ -113,7 +113,7 @@ Two basic synthesis approaches are:
 Hierarchical Synthesis
 Flattened Synthesis
 
-## 2.1 Hierarchical Synthesis
+ **2.1 Hierarchical Synthesis**
 In hierarchical synthesis, the module structure of the RTL design is preserved.
 
 Example
@@ -127,7 +127,7 @@ Easier to understand.
 Easier to debug.
 Useful for large designs.
 
-## Yosys Commands
+**Yosys Commands**
 
 Start Yosys:
 
@@ -137,19 +137,19 @@ Read the Verilog design:
 
 read_verilog design.v
 
-## Set the top module:
+ Set the top module:
 
 hierarchy -top top
 
-## Run synthesis:
+ Run synthesis:
 
 synth
 
-## Display the synthesized design:
+ Display the synthesized design:
 
 show
 
-## 2.2 Flattened Synthesis
+ **2.2 Flattened Synthesis**
 
 In flattened synthesis, the module hierarchy is removed and the complete design is combined into one logic structure.
 
@@ -157,12 +157,12 @@ Example
 Top Module
 └── Combined Logic
 
-## Advantages
+ **Advantages**
 Allows optimization across module boundaries.
 Removes unnecessary hierarchy.
 Provides a combined logic representation.
 
-## Yosys Commands
+ **Yosys Commands**
 
 ## Start Yosys:
 
@@ -185,23 +185,24 @@ flatten
 synth
 
  ## Display the synthesized design:
-
 show
-# 2.3 Comparison of Hierarchical and Flattened Synthesis
-Feature	Hierarchical Synthesis	Flattened Synthesis
-Module hierarchy	Preserved	Removed
-Design structure	Modular	Combined
-Debugging	Easier	More difficult
-Optimization	Within hierarchy	Across hierarchy
-Design understanding	Easier	More complex
 
-Key Difference
+**2.3 Comparison of Hierarchical and Flattened Synthesis**
 
+| Feature              | Hierarchical Synthesis | Flattened Synthesis |
+| -------------------- | ---------------------- | ------------------- |
+| Module hierarchy     | Preserved              | Removed             |
+| Design structure     | Modular                | Combined            |
+| Debugging            | Easier                 | More difficult      |
+| Optimization         | Within hierarchy       | Across hierarchy    |
+| Design understanding | Easier                 | More complex        |
+
+**Key Difference**
 Hierarchical → Module structure is preserved
 
 Flattened → Module structure is combined
 
-# 4. RTL Simulation and Synthesis Flow
+** 4. RTL Simulation and Synthesis Flow**
 
 ## Start Yosys:
 
@@ -227,7 +228,7 @@ abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
 
 show
 
-## Complete RTL Flow
+ **Complete RTL Flow**
 
 Verilog RTL
      ↓
@@ -251,9 +252,9 @@ Technology Mapping
      ↓
 Gate-Level Design
 
-# 5. Summary
+**5. Summary**
 
-Key Learnings
+**Key Learnings**
 Learned the basics of the SKY130 PDK.
 Understood the tt_025C_1v80 timing corner.
 Explored the Liberty (.lib) file.
@@ -268,7 +269,7 @@ Analyzed waveforms using GTKWave.
 Synthesized RTL using Yosys.
 Understood the complete RTL-to-gate-level flow.
 
-## Conclusion
+**Conclusion**
 
 This module introduced timing libraries, the SKY130 PDK, synthesis approaches, and flip-flop coding.
 
