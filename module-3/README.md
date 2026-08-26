@@ -74,6 +74,7 @@ The reset operation depends on the clock.
 | Sensitivity list         | Includes reset                 | Clock only        |
 | Example                  | `posedge clk or posedge reset` | `posedge clk`     |
 
+---
 
 ## **2. Interesting Optimization**
 
@@ -125,6 +126,7 @@ show
 
 The RTL is now represented using standard cells from the selected SKY130 library.
 
+--- 
 ## **3. Generated Synthesized Netlist**
 
 A synthesized Verilog netlist can be generated using the write_verilog command.
@@ -154,6 +156,8 @@ Technology Mapping
 Synthesized Netlist
 
 The synthesized netlist can be examined to understand how the original RTL is converted into hardware cells and logic.
+```
+---
 
 ## **4. Overall Results**
 
@@ -168,6 +172,7 @@ The following results were obtained from the experiments:
 - Constant multiplication operations were synthesized and optimized.
 - Yosys generated optimized hardware representations from the RTL.
 - Synthesized Verilog netlists were generated and examined.
+---
 
 ## **5. Conclusion**
 
