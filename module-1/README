@@ -67,6 +67,7 @@ gtkwave tb_good_mux.vcd
 
 Result
 ![image alt](https://github.com/madhurimajindamwar-a11y/vsd/blob/516783ce76c1b0022d0f4fe95e803be5a3fa6e45/good_mux.jpeg)
+<img width="1280" height="835" alt="Image" src="https://github.com/user-attachments/assets/f8f507f5-6c23-43ab-b41f-330fc0155dcd" />
 
 The waveform confirms that the multiplexer correctly selects the required input according to the select signal.
 
