@@ -180,8 +180,8 @@ Design → Testbench → Simulation → Verification → Synthesis
 ## **Author**
 ```text
 
-**Name:** J.Madhurima
-**College:** Anurag University
-**Branch:** Electronics and Communication Engineering (ECE)
+Name: J.Madhurima
+College: Anurag University
+Branch: Electronics and Communication Engineering (ECE)
 ```
 
