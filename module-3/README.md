@@ -142,7 +142,7 @@ or:
 cat synthesized_netlist.v
 
 **Netlist Flow**
-
+```text
 RTL Code
    ↓
 Yosys Synthesis
