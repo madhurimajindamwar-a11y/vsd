@@ -50,14 +50,13 @@ rtl/sequence_detector.v
 ```
 The design contains the following ports:
 ##
-```text
+
 | Signal     | Type   | Description               |
 | ---------- | ------ | ------------------------- |
 | `clk`      | Input  | Clock signal              |
 | `reset`    | Input  | Active-high reset         |
 | `din`      | Input  | Serial input data         |
 | `detected` | Output | Sequence detection output |
-```
 ##
 **RTL Module**
 ``` bash
