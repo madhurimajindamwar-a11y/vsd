@@ -49,6 +49,7 @@ RTL File
 rtl/sequence_detector.v
 ```
 The design contains the following ports:
+##
 ```text
 | Signal     | Type   | Description               |
 | ---------- | ------ | ------------------------- |
@@ -57,6 +58,7 @@ The design contains the following ports:
 | `din`      | Input  | Serial input data         |
 | `detected` | Output | Sequence detection output |
 ```
+##
 **RTL Module**
 ``` bash
 module sequence_detector (
