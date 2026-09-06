@@ -147,6 +147,7 @@ Clock circuits
 Other IP blocks
 ```
 **Basic SoC Structure**
+```
                  SoC
     ┌──────────────────────────┐
     │                          │
@@ -160,6 +161,7 @@ Other IP blocks
     │         Timer            │
     │                          │
     └──────────────────────────┘
+```
 ---
 ## **6. Components of Open-Source Digital ASIC Design**
 A digital ASIC design flow requires several tools and components.
