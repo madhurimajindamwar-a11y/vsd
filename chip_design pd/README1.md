@@ -50,7 +50,7 @@ A QFN-48 package has 48 external electrical connections and contains the semicon
 ```
 ---
 ## **2.2 Important Chip Terms**
-```
+
 | Term              | Meaning                                                |
 | ----------------- | ------------------------------------------------------ |
 | **Package**       | Physical outer body containing the chip                |
@@ -60,7 +60,7 @@ A QFN-48 package has 48 external electrical connections and contains the semicon
 | **IP**            | Reusable Intellectual Property block                   |
 | **Standard Cell** | Pre-designed logic cell such as NAND, NOR or Flip-Flop |
 | **Macro**         | Large predefined block such as memory or processor     |
-```
+
 **Relationship**
 ``` text
 Package
