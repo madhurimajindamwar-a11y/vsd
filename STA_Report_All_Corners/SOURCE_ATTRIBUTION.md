@@ -1,7 +1,6 @@
 # Source attribution — reference STA reports
 
 These files are unchanged copies from Sangathram/RTL_Workshop, folder STA_Report_All_Corners.
-Source: https://github.com/Sangathram/RTL_Workshop/tree/82ab3a33a250256294bea2cd65f77d53d2366c61/STA_Report_All_Corners
 Commit: 82ab3a33a250256294bea2cd65f77d53d2366c61
 
 They are the source author's published reference results, not STA results generated for madhurimajindamwar-a11y/vsd. No STA was run during preparation of this archive. Original reports, logs, scripts, README and supporting files are preserved byte-for-byte. This copy does not independently validate the source results.
